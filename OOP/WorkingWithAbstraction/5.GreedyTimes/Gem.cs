@@ -4,14 +4,19 @@ using System.Text;
 
 namespace P05_GreedyTimes
 {
-    public class Gold
+    public class Gem
     {
+        public Gem(string name, long value)
+        {
+            this.Name = name;
+            this.Value = value;
+        }
+        public string Name { get; set; }
         public long Value { get; set; }
-
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.AppendLine($"##Gold - {this.Value}");
+            sb.AppendLine($"##{this.Name} - {this.Value}");
             return sb.ToString().TrimEnd();
         }
     }
