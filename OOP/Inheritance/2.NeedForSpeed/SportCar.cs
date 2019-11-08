@@ -4,11 +4,11 @@ using System.Text;
 
 namespace NeedForSpeed
 {
-    public class Car : Vehicle
+    public class SportCar : Car
     {
-        public Car(int horsePower, double fuel) : base(horsePower, fuel)
+        public SportCar(int horsePower, double fuel) : base(horsePower, fuel)
         {
-            this.FuelConsumption = 3.0;
+            this.FuelConsumption = 10.0;
         }
         public override double FuelConsumption { get => base.FuelConsumption; set => base.FuelConsumption = value; }
         public override void Drive(double kilometers)
