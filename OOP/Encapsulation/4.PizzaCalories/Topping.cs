@@ -10,16 +10,16 @@ namespace _4.PizzaCalories
         private const double veggiesType = 0.8;
         private const double cheeseType = 1.1;
         private const double sauceType = 0.9;
-        private int weight;
+        private double weight;
         private string type;
 
 
-        public Topping(string type, int weight)
+        public Topping(string type, double weight)
         {
             this.Type = type;
             this.Weight = weight;
         }
-        public int Weight
+        public double Weight
         {
             get { return weight; }
             private set
@@ -61,17 +61,9 @@ namespace _4.PizzaCalories
                     return veggiesType;
                 case "cheese":
                     return cheeseType;
-                case "sauce":
-                    return sauceType;
                 default:
-                    throw new ArgumentException($"Cannot place {typeName} on top of your pizza.");
+                    return sauceType;
             }
-        }
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.AppendLine($"{GetTotalCalories():f2}");
-            return sb.ToString().TrimEnd();
         }
     }
 }
