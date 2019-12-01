@@ -4,8 +4,9 @@ using System.Text;
 
 namespace _8.MilitaryElite.Interfaces
 {
-    public interface ISpy : ISoldier
+    public interface IRepair
     {
-        public int CodeNumber { get; }
+        public string PartName { get; }
+        public int Hours { get; }
     }
 }
