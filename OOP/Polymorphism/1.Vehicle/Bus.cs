@@ -4,20 +4,20 @@ using System.Text;
 
 namespace _1.Vehicles
 {
-    public class Car : Vehicle
+    public class Bus : Vehicle, IDriveable, IRefuelabe
     {
         private double fuelQuantity;
 
-        public Car(double fuelQuantity, double fuelConsumption, double tankCapacity) : base(fuelQuantity, fuelConsumption, tankCapacity)
+        public Bus(double fuelQuant, double fuelConsum, double tankCapacity) : base(fuelQuant, fuelConsum, tankCapacity)
         {
-            this.FuelQuantity = fuelQuantity;
-            this.FuelConsumption = fuelConsumption + 0.9;
+            this.FuelQuantity = fuelQuant;
+            this.FuelConsumption = fuelConsum;
             this.TankCapacity = tankCapacity;
         }
         public override double FuelQuantity 
         {
             get => fuelQuantity;
-            protected set 
+            protected set
             {
                 if (value > this.TankCapacity)
                 {
@@ -33,15 +33,15 @@ namespace _1.Vehicles
         public override double TankCapacity { get; protected set; }
         public override void Drive(double distance)
         {
-            var result = distance * this.FuelConsumption;
+            var result = distance * (this.FuelConsumption + 1.4);
             if (result <= this.FuelQuantity)
             {
-                Console.WriteLine($"Car travelled {distance} km");
+                Console.WriteLine($"Bus travelled {distance} km");
                 this.FuelQuantity -= result;
             }
             else
             {
-                Console.WriteLine($"Car needs refueling");
+                Console.WriteLine($"Bus needs refueling");
             }
         }
 
@@ -58,6 +58,19 @@ namespace _1.Vehicles
             else
             {
                 this.FuelQuantity += fuelAmount;
+            }
+        }
+        public void DriveEmpty(double distance)
+        {
+            var result = distance * this.FuelConsumption;
+            if (result <= this.FuelQuantity)
+            {
+                Console.WriteLine($"Bus travelled {distance} km");
+                this.FuelQuantity -= result;
+            }
+            else
+            {
+                Console.WriteLine($"Bus needs refueling");
             }
         }
     }

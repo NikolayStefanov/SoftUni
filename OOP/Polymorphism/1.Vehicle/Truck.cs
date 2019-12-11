@@ -4,20 +4,20 @@ using System.Text;
 
 namespace _1.Vehicles
 {
-    public class Car : Vehicle
+    public class Truck : Vehicle
     {
         private double fuelQuantity;
 
-        public Car(double fuelQuantity, double fuelConsumption, double tankCapacity) : base(fuelQuantity, fuelConsumption, tankCapacity)
+        public Truck(double fuelQuantity, double fuelConsumption, double tankCapa) : base(fuelQuantity, fuelConsumption, tankCapa)
         {
             this.FuelQuantity = fuelQuantity;
-            this.FuelConsumption = fuelConsumption + 0.9;
-            this.TankCapacity = tankCapacity;
+            this.FuelConsumption = fuelConsumption + 1.6;
+            this.TankCapacity = tankCapa;
         }
-        public override double FuelQuantity 
+        public override double FuelQuantity
         {
             get => fuelQuantity;
-            protected set 
+            protected set
             {
                 if (value > this.TankCapacity)
                 {
@@ -29,19 +29,19 @@ namespace _1.Vehicles
                 }
             }
         }
-        public override double FuelConsumption { get; protected set; }
         public override double TankCapacity { get; protected set; }
+        public override double FuelConsumption { get; protected set; }
         public override void Drive(double distance)
         {
             var result = distance * this.FuelConsumption;
-            if (result <= this.FuelQuantity)
+            if (result <= FuelQuantity)
             {
-                Console.WriteLine($"Car travelled {distance} km");
+                Console.WriteLine($"Truck travelled {distance} km");
                 this.FuelQuantity -= result;
             }
             else
             {
-                Console.WriteLine($"Car needs refueling");
+                Console.WriteLine($"Truck needs refueling");
             }
         }
 
@@ -57,7 +57,7 @@ namespace _1.Vehicles
             }
             else
             {
-                this.FuelQuantity += fuelAmount;
+                this.FuelQuantity += fuelAmount * 0.95;
             }
         }
     }
