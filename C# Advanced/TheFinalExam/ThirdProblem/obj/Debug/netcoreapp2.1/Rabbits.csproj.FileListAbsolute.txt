@@ -1,0 +1,11 @@
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\ThirdProblem\obj\Debug\netcoreapp2.1\Rabbits.csprojAssemblyReference.cache
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\ThirdProblem\obj\Debug\netcoreapp2.1\Rabbits.csproj.CoreCompileInputs.cache
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\ThirdProblem\obj\Debug\netcoreapp2.1\Rabbits.AssemblyInfoInputs.cache
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\ThirdProblem\obj\Debug\netcoreapp2.1\Rabbits.AssemblyInfo.cs
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\ThirdProblem\bin\Debug\netcoreapp2.1\Rabbits.deps.json
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\ThirdProblem\bin\Debug\netcoreapp2.1\Rabbits.runtimeconfig.json
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\ThirdProblem\bin\Debug\netcoreapp2.1\Rabbits.runtimeconfig.dev.json
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\ThirdProblem\bin\Debug\netcoreapp2.1\Rabbits.dll
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\ThirdProblem\bin\Debug\netcoreapp2.1\Rabbits.pdb
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\ThirdProblem\obj\Debug\netcoreapp2.1\Rabbits.dll
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\ThirdProblem\obj\Debug\netcoreapp2.1\Rabbits.pdb

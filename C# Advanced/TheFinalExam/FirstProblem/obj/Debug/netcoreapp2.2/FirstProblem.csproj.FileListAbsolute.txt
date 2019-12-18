@@ -1,0 +1,11 @@
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\FirstProblem\bin\Debug\netcoreapp2.2\FirstProblem.deps.json
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\FirstProblem\bin\Debug\netcoreapp2.2\FirstProblem.runtimeconfig.json
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\FirstProblem\bin\Debug\netcoreapp2.2\FirstProblem.runtimeconfig.dev.json
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\FirstProblem\bin\Debug\netcoreapp2.2\FirstProblem.dll
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\FirstProblem\bin\Debug\netcoreapp2.2\FirstProblem.pdb
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\FirstProblem\obj\Debug\netcoreapp2.2\FirstProblem.csprojAssemblyReference.cache
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\FirstProblem\obj\Debug\netcoreapp2.2\FirstProblem.csproj.CoreCompileInputs.cache
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\FirstProblem\obj\Debug\netcoreapp2.2\FirstProblem.AssemblyInfoInputs.cache
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\FirstProblem\obj\Debug\netcoreapp2.2\FirstProblem.AssemblyInfo.cs
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\FirstProblem\obj\Debug\netcoreapp2.2\FirstProblem.dll
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\FirstProblem\obj\Debug\netcoreapp2.2\FirstProblem.pdb

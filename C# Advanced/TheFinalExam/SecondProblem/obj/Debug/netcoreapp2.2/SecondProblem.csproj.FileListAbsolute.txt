@@ -1,0 +1,10 @@
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\SecondProblem\bin\Debug\netcoreapp2.2\SecondProblem.deps.json
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\SecondProblem\bin\Debug\netcoreapp2.2\SecondProblem.runtimeconfig.json
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\SecondProblem\bin\Debug\netcoreapp2.2\SecondProblem.runtimeconfig.dev.json
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\SecondProblem\bin\Debug\netcoreapp2.2\SecondProblem.dll
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\SecondProblem\bin\Debug\netcoreapp2.2\SecondProblem.pdb
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\SecondProblem\obj\Debug\netcoreapp2.2\SecondProblem.csproj.CoreCompileInputs.cache
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\SecondProblem\obj\Debug\netcoreapp2.2\SecondProblem.AssemblyInfoInputs.cache
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\SecondProblem\obj\Debug\netcoreapp2.2\SecondProblem.AssemblyInfo.cs
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\SecondProblem\obj\Debug\netcoreapp2.2\SecondProblem.dll
+C:\Users\35987\source\repos\TheExamCSharpAdvanced\SecondProblem\obj\Debug\netcoreapp2.2\SecondProblem.pdb
