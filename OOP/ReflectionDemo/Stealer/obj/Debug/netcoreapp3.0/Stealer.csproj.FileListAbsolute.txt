@@ -1,0 +1,11 @@
+C:\Users\35987\source\repos\ReflectionDemo\Stealer\bin\Debug\netcoreapp3.0\Stealer.exe
+C:\Users\35987\source\repos\ReflectionDemo\Stealer\bin\Debug\netcoreapp3.0\Stealer.deps.json
+C:\Users\35987\source\repos\ReflectionDemo\Stealer\bin\Debug\netcoreapp3.0\Stealer.runtimeconfig.json
+C:\Users\35987\source\repos\ReflectionDemo\Stealer\bin\Debug\netcoreapp3.0\Stealer.runtimeconfig.dev.json
+C:\Users\35987\source\repos\ReflectionDemo\Stealer\bin\Debug\netcoreapp3.0\Stealer.dll
+C:\Users\35987\source\repos\ReflectionDemo\Stealer\bin\Debug\netcoreapp3.0\Stealer.pdb
+C:\Users\35987\source\repos\ReflectionDemo\Stealer\obj\Debug\netcoreapp3.0\Stealer.csprojAssemblyReference.cache
+C:\Users\35987\source\repos\ReflectionDemo\Stealer\obj\Debug\netcoreapp3.0\Stealer.AssemblyInfoInputs.cache
+C:\Users\35987\source\repos\ReflectionDemo\Stealer\obj\Debug\netcoreapp3.0\Stealer.AssemblyInfo.cs
+C:\Users\35987\source\repos\ReflectionDemo\Stealer\obj\Debug\netcoreapp3.0\Stealer.dll
+C:\Users\35987\source\repos\ReflectionDemo\Stealer\obj\Debug\netcoreapp3.0\Stealer.pdb

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "P03_BarraksWars/1.0.0": {
+        "runtime": {
+          "P03_BarraksWars.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "P03_BarraksWars/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,10 @@
+C:\Users\35987\source\repos\ReflectionDemo\P03_BarraksWars\bin\Debug\netcoreapp2.0\P03_BarraksWars.deps.json
+C:\Users\35987\source\repos\ReflectionDemo\P03_BarraksWars\bin\Debug\netcoreapp2.0\P03_BarraksWars.runtimeconfig.json
+C:\Users\35987\source\repos\ReflectionDemo\P03_BarraksWars\bin\Debug\netcoreapp2.0\P03_BarraksWars.runtimeconfig.dev.json
+C:\Users\35987\source\repos\ReflectionDemo\P03_BarraksWars\bin\Debug\netcoreapp2.0\P03_BarraksWars.dll
+C:\Users\35987\source\repos\ReflectionDemo\P03_BarraksWars\bin\Debug\netcoreapp2.0\P03_BarraksWars.pdb
+C:\Users\35987\source\repos\ReflectionDemo\P03_BarraksWars\obj\Debug\netcoreapp2.0\P03_BarraksWars.csprojAssemblyReference.cache
+C:\Users\35987\source\repos\ReflectionDemo\P03_BarraksWars\obj\Debug\netcoreapp2.0\P03_BarraksWars.AssemblyInfoInputs.cache
+C:\Users\35987\source\repos\ReflectionDemo\P03_BarraksWars\obj\Debug\netcoreapp2.0\P03_BarraksWars.AssemblyInfo.cs
+C:\Users\35987\source\repos\ReflectionDemo\P03_BarraksWars\obj\Debug\netcoreapp2.0\P03_BarraksWars.dll
+C:\Users\35987\source\repos\ReflectionDemo\P03_BarraksWars\obj\Debug\netcoreapp2.0\P03_BarraksWars.pdb

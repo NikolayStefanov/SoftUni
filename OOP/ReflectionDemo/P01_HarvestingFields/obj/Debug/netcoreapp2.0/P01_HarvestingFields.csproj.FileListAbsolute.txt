@@ -1,0 +1,10 @@
+C:\Users\35987\source\repos\ReflectionDemo\P01_HarvestingFields\bin\Debug\netcoreapp2.0\P01_HarvestingFields.deps.json
+C:\Users\35987\source\repos\ReflectionDemo\P01_HarvestingFields\bin\Debug\netcoreapp2.0\P01_HarvestingFields.runtimeconfig.json
+C:\Users\35987\source\repos\ReflectionDemo\P01_HarvestingFields\bin\Debug\netcoreapp2.0\P01_HarvestingFields.runtimeconfig.dev.json
+C:\Users\35987\source\repos\ReflectionDemo\P01_HarvestingFields\bin\Debug\netcoreapp2.0\P01_HarvestingFields.dll
+C:\Users\35987\source\repos\ReflectionDemo\P01_HarvestingFields\bin\Debug\netcoreapp2.0\P01_HarvestingFields.pdb
+C:\Users\35987\source\repos\ReflectionDemo\P01_HarvestingFields\obj\Debug\netcoreapp2.0\P01_HarvestingFields.csprojAssemblyReference.cache
+C:\Users\35987\source\repos\ReflectionDemo\P01_HarvestingFields\obj\Debug\netcoreapp2.0\P01_HarvestingFields.AssemblyInfoInputs.cache
+C:\Users\35987\source\repos\ReflectionDemo\P01_HarvestingFields\obj\Debug\netcoreapp2.0\P01_HarvestingFields.AssemblyInfo.cs
+C:\Users\35987\source\repos\ReflectionDemo\P01_HarvestingFields\obj\Debug\netcoreapp2.0\P01_HarvestingFields.dll
+C:\Users\35987\source\repos\ReflectionDemo\P01_HarvestingFields\obj\Debug\netcoreapp2.0\P01_HarvestingFields.pdb
