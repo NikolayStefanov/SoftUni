@@ -1,0 +1,11 @@
+C:\Users\35987\source\repos\JustRemember\SantaWorkshop\obj\Debug\netcoreapp3.0\SantaWorkshop.csprojAssemblyReference.cache
+C:\Users\35987\source\repos\JustRemember\SantaWorkshop\obj\Debug\netcoreapp3.0\SantaWorkshop.AssemblyInfoInputs.cache
+C:\Users\35987\source\repos\JustRemember\SantaWorkshop\obj\Debug\netcoreapp3.0\SantaWorkshop.AssemblyInfo.cs
+C:\Users\35987\source\repos\JustRemember\SantaWorkshop\bin\Debug\netcoreapp3.0\SantaWorkshop.exe
+C:\Users\35987\source\repos\JustRemember\SantaWorkshop\bin\Debug\netcoreapp3.0\SantaWorkshop.deps.json
+C:\Users\35987\source\repos\JustRemember\SantaWorkshop\bin\Debug\netcoreapp3.0\SantaWorkshop.runtimeconfig.json
+C:\Users\35987\source\repos\JustRemember\SantaWorkshop\bin\Debug\netcoreapp3.0\SantaWorkshop.runtimeconfig.dev.json
+C:\Users\35987\source\repos\JustRemember\SantaWorkshop\bin\Debug\netcoreapp3.0\SantaWorkshop.dll
+C:\Users\35987\source\repos\JustRemember\SantaWorkshop\bin\Debug\netcoreapp3.0\SantaWorkshop.pdb
+C:\Users\35987\source\repos\JustRemember\SantaWorkshop\obj\Debug\netcoreapp3.0\SantaWorkshop.dll
+C:\Users\35987\source\repos\JustRemember\SantaWorkshop\obj\Debug\netcoreapp3.0\SantaWorkshop.pdb
