@@ -1,0 +1,15 @@
+{
+  "name": "8.unittesting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "EvenOrOdd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1"
+  }
+}
