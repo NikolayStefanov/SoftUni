@@ -1,6 +1,6 @@
 function getInfo() {
-    let inputIt = document.querySelector("#stopId").value;
-    let theURL = `https://javascriptlearningprojec-43061.firebaseio.com/businfo/${inputIt}.json`
+    let inputId = document.querySelector("#stopId").value;
+    let theURL = `https://judgetests.firebaseio.com/businfo/${inputId}.json`
     document.querySelector("#buses").innerHTML = '';
 
     fetch(theURL)

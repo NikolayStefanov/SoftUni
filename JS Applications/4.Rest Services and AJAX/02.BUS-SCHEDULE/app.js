@@ -1,6 +1,6 @@
 function solve() {
 
-    let theUrl = `https://javascriptlearningprojec-43061.firebaseio.com/businfo/schedule/`
+    let theUrl = `https://judgetests.firebaseio.com/schedule/`
     let currentStopId = 'depot';
     let currentStop = '';
 

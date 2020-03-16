@@ -17,7 +17,7 @@ function attachEvents() {
             fetch(databaseUrl, {
                 method: 'POST',
                 body: JSON.stringify(theNewMessage)
-            }).then(()=> {refreshTheChat()})
+            })
             
         }else{
             throw new  Error('Incorrect Name or Message!')
