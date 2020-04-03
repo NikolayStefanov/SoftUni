@@ -1,0 +1,39 @@
+{{> header}}
+<!-- Dashboard (All Causes View) -->
+{{#if thereIsTreks}}
+<div id="treks-list">
+    {{#each treks}}
+    <a href="#/trek/details/{{id}}" class="card overflow-hidden treksPlaceholder trek-details" style="width: 20rem; height: 18rem;">
+        <div class="card-body">
+            <p class="card-text">{{location}}</p>
+        </div>
+        <img class="card-image" src="{{imageURL}}" alt="Card image cap">
+    </a>
+    {{/each}}
+</div>
+{{else}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="fouronefour">
+                <img class="no-found-picture" src="./images/empty.jpg" />
+            </div>
+            <div class="no-found-template">
+                <h1>
+                    There aren't any treks, yet!</h1>
+                <h2>
+                    What do you have in mind?</h2>
+                <div class="no-found-details">
+                    Be the first explorer!
+                </div>
+                <div class="actions">
+                    <a href="#/trek/create" class="btn btn-dark btn-lg">Create the first trek? </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+<!-- ./Dashboard (All Causes View) -->
+{{> footer}}
