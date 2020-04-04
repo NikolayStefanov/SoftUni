@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SoftTerest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="./styles/common.css" />
+  <link rel="stylesheet" href="./styles/home.css" />
+  <link rel="stylesheet" href="./styles/login.css" />
+  <link rel="stylesheet" href="./styles/dashboard.css" />
+  <link rel="stylesheet" href="./styles/ideas.css" />
+</head>
+
+<body>
+
+
+    <div id="main"></div>
+    <!-- Node Modules -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="./node_modules/sammy/lib/sammy.js"></script>
+    <script src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAGTfzcLgum0l15T2v3XSfyP0GTZ0jKoXY",
+        authDomain: "softterest-2d285.firebaseapp.com",
+        databaseURL: "https://softterest-2d285.firebaseio.com",
+        projectId: "softterest-2d285",
+        storageBucket: "softterest-2d285.appspot.com",
+        messagingSenderId: "722505009544",
+        appId: "1:722505009544:web:6e2272f0adae690e66923d",
+        measurementId: "G-9N13W8QDRJ"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+   <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+
+    <script type="module" src="./scripts/app.js"></script>
+    <!-- ./Node Modules -->
+
+    <!-- Helpers -->
+    <!-- ./Helpers -->
+
+    <!-- Controllers -->
+    <!-- ./Controllers -->
+
+    <!-- Models -->
+    <!-- ./Models -->
+
+    <!-- APP -->
+    <!-- ./APP -->
+
+</body>
+
+</html>
