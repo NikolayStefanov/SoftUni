@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftWiki SPA</title>
+</head>
+
+<body>
+
+<!-- Footer -->
+    <div id="main"></div>
+    <!-- Node Modules -->
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="/node_modules/sammy/lib/sammy.js"></script>
+    <script src="/node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyB_bLgP_iXrcYtRT492G2WQSuO2fhW0S44",
+        authDomain: "thefuckingdatabase.firebaseapp.com",
+        databaseURL: "https://thefuckingdatabase.firebaseio.com",
+        projectId: "thefuckingdatabase",
+        storageBucket: "thefuckingdatabase.appspot.com",
+        messagingSenderId: "282917330513",
+        appId: "1:282917330513:web:b05b90be05497b7bd2a270",
+        measurementId: "G-6XL779189T"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+
+    <script type="module" src="./scripts/app.js"></script>
+    <!-- ./Node Modules -->
+
+
+</body>
+
+</html>
