@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Table_Relations">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="DESKTOP-9UTID0E:DESKTOP-9UTID0E\35987">
+          <Created>2020-05-27T14:25:04.9296125+03:00</Created>
+          <Type>SQL</Type>
+          <Server>DESKTOP-9UTID0E</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="1.One_To_One_RELATIONSHIP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-9UTID0E:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-9UTID0E</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>1.One_To_One_RELATIONSHIP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2.One_To_Many_RELATIONSHIP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-9UTID0E:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-9UTID0E</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>2.One_To_Many_RELATIONSHIP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="3.Many_To_Many RELATIONSHIP.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-9UTID0E:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-9UTID0E</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>3.Many_To_Many RELATIONSHIP.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

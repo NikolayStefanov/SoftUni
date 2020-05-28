@@ -1,0 +1,33 @@
+CREATE TABLE Students(
+StudentID INT PRIMARY KEY IDENTITY NOT NULL,
+Name NVARCHAR(30) NOT NULL
+)
+
+INSERT INTO Students(Name)
+VALUES('Mila'),
+	  ('Toni'),
+	  ('Ron')
+
+CREATE TABLE Exams(
+ExamID INT PRIMARY KEY IDENTITY(101,1) NOT NULL,
+Name NVARCHAR(30) NOT NULL
+)
+
+INSERT INTO Exams(Name)
+VALUES('SpringMVC'),
+	  ('Neo4j'),
+	  ('Oracle 11g')
+
+CREATE TABLE StudentsExams(
+StudentID INT FOREIGN KEY REFERENCES Students(StudentID) NOT NULL,
+ExamID INT FOREIGN KEY REFERENCES Exams(ExamID) NOT NULL,
+CONSTRAINT PK_StudentsExamsPK PRIMARY KEY (StudentID, ExamID)
+)
+
+INSERT INTO StudentsExams
+VALUES(1, 101),
+	  (1, 102),
+	  (2, 101),
+	  (3, 103),
+	  (2, 102),
+	  (2, 103)
