@@ -30,5 +30,26 @@ FROM (SELECT  c.ContinentCode,
 WHERE k.CurrencyRank = 1
 ORDER BY k.ContinentCode
 
+--EXERCISE 16
+SELECT COUNT(*) AS [Count] FROM Countries AS c
+LEFT JOIN MountainsCountries AS m ON c.CountryCode = m.CountryCode
+WHERE m.CountryCode IS NULL
+
+
+--EXERCISE 17
+
+SELECT TOP(5) f.CountryName, MAX(s.Elevation) AS [HighestPeakElevation], MAX(f.Length) AS [LongestRiverLength] FROM (SELECT DISTINCT c.CountryName, r.Length FROM Countries AS c
+JOIN CountriesRivers AS cr ON cr.CountryCode = c.CountryCode
+JOIN Rivers AS r ON cr.RiverId = r.Id) AS f
+JOIN (SELECT DISTINCT c.CountryName, p.Elevation FROM Countries AS c
+JOIN MountainsCountries AS mc ON c.CountryCode = mc.CountryCode
+JOIN Peaks AS p ON mc.MountainId= p.MountainId ) AS s ON f.CountryName = s.CountryName
+GROUP BY f.CountryName
+ORDER BY MAX(s.Elevation) DESC, MAX(f.Length) DESC, f.CountryName 
+
+
+
+
+
 
 
