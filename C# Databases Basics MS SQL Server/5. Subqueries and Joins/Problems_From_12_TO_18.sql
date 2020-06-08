@@ -47,6 +47,19 @@ JOIN Peaks AS p ON mc.MountainId= p.MountainId ) AS s ON f.CountryName = s.Count
 GROUP BY f.CountryName
 ORDER BY MAX(s.Elevation) DESC, MAX(f.Length) DESC, f.CountryName 
 
+--EXERCISE 18
+SELECT TOP(5) CountryName, ISNULL(PeakName, '(no highest peak)') AS [Highest Peak Name], ISNULL([Highest Peak Elevation], 0) AS [Highest Peak Elevation], ISNULL(Mountain, '(no mountain)') AS [Mountain]
+FROM (SELECT c.CountryName,
+		p.PeakName, 
+		p.Elevation AS [Highest Peak Elevation],
+		m.MountainRange AS Mountain,
+		DENSE_RANK() OVER(PARTITION BY c.CountryName ORDER BY p.Elevation DESC) AS [Rank]
+			FROM Countries AS c
+			LEFT JOIN MountainsCountries AS mc ON c.CountryCode = mc.CountryCode
+			LEFT JOIN Mountains AS m ON mc.MountainId = m.Id
+			LEFT JOIN Peaks AS p ON p.MountainId = m.Id) AS r
+WHERE r.Rank = 1
+ORDER BY CountryName, [Highest Peak Name]
 
 
 
