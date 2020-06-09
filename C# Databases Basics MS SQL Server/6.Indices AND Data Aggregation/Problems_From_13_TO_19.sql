@@ -31,5 +31,16 @@ HAVING MAX(Salary) NOT BETWEEN 30000 AND 70000
 SELECT COUNT(*) AS [Count] FROM Employees WHERE ManagerID IS NULL
 
 --EXERCISE 18
+SELECT i.DepartmentID, i.Salary AS [ThirdHighestSalary] 
+FROM (SELECT DepartmentID, Salary, DENSE_RANK() OVER(PARTITION BY DepartmentID ORDER BY Salary DESC) AS [SalaryRank] 
+	  FROM Employees) AS i
+WHERE i.SalaryRank = 3
+GROUP BY i.DepartmentID, i.Salary
 
 --EXERCISE 19
+SELECT TOP(10) e.FirstName, e.LastName, e.DepartmentID 
+FROM Employees AS e
+JOIN (SELECT DepartmentID, AVG(Salary) AS [AverageSalary] FROM Employees
+GROUP BY DepartmentID) AS ast on ast.DepartmentID =  e.DepartmentID
+WHERE e.Salary > ast.AverageSalary
+ORDER BY e.DepartmentID
