@@ -1,7 +1,7 @@
 --EXERCISE 13
 
 CREATE FUNCTION ufn_CashInUsersGames (@GameName VARCHAR(30))
-RETURNS @output TABLE(SumCash DECIMAL(18,2))
+RETURNS @output TABLE(SumCash DECIMAL(18,4))
 AS
 BEGIN 
 	INSERT INTO @output SELECT (
@@ -16,5 +16,5 @@ BEGIN
 	RETURN;
 END
 
-SELECT * FROM DBO.ufn_CashInUsersGames('Saponaria')
+SELECT * FROM DBO.ufn_CashInUsersGames('Love in a mist')
 
