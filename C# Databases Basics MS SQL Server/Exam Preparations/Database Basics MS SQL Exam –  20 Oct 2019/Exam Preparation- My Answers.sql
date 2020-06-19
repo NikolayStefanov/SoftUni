@@ -95,11 +95,10 @@ WHERE MONTH(u.Birthdate) = MONTH(r.OpenDate) AND DAY(u.Birthdate) = DAY(r.OpenDa
 ORDER BY u.Username, c.Name
 
 --EXERCISE 9
-SELECT ft.FullName, COUNT(ft.EmployeeId) AS [UsersCount] FROM (SELECT (e.FirstName + ' ' +e.LastName) AS [FullName], r.EmployeeId, r.UserId FROM Reports AS r
-RIGHT JOIN Employees AS e ON r.EmployeeId = e.Id
-GROUP BY r.EmployeeId, r.UserId, e.FirstName, e.LastName) AS ft
-GROUP BY ft.FullName
-ORDER BY COUNT(ft.EmployeeId) DESC, FullName
+SELECT (e.FirstName + ' ' +e.LastName) AS [FullName] , COUNT(r.EmployeeId) AS [UsersCount] FROM Reports AS r
+JOIN Employees AS e ON r.EmployeeId = e.Id
+GROUP BY e.Id, e.FirstName, e.LastName
+ORDER BY [UsersCount] DESC, FullName ASC
 
 --EXERCISE 10
 SELECT 
