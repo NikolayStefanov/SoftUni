@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace P01_HospitalDatabase.Data.Models
+﻿namespace P01_HospitalDatabase.Data.Models
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     public class Doctor
     {
         [Key]
