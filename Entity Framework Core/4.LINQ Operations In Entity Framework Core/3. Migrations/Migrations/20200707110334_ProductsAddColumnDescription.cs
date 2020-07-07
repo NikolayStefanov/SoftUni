@@ -14,7 +14,7 @@ namespace P03_SalesDatabase.Migrations
                     CustomerId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 100, nullable: false),
-                    Email = table.Column<string>(maxLength: 80, nullable: false),
+                    Email = table.Column<string>(unicode: false, maxLength: 80, nullable: false),
                     CreditCardNumber = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
@@ -30,7 +30,7 @@ namespace P03_SalesDatabase.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 50, nullable: false),
                     Desctiption = table.Column<string>(maxLength: 250, nullable: true, defaultValue: "No description"),
-                    Quantity = table.Column<double>(nullable: false),
+                    Quantity = table.Column<float>(nullable: false),
                     Price = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>

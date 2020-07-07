@@ -10,8 +10,8 @@ using P03_SalesDatabase.Data;
 namespace P03_SalesDatabase.Migrations
 {
     [DbContext(typeof(SalesContext))]
-    [Migration("20200707103352_SalesAddDateDefault")]
-    partial class SalesAddDateDefault
+    [Migration("20200707110334_ProductsAddColumnDescription")]
+    partial class ProductsAddColumnDescription
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,8 +34,9 @@ namespace P03_SalesDatabase.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
+                        .HasColumnType("varchar(80)")
+                        .HasMaxLength(80)
+                        .IsUnicode(false);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -87,9 +88,7 @@ namespace P03_SalesDatabase.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");

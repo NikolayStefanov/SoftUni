@@ -5,6 +5,10 @@ namespace P03_SalesDatabase.Data.Models
 {
     public class Customer
     {
+        public Customer()
+        {
+            this.Sales = new HashSet<Sale>();
+        }
         [Key]
         public int CustomerId { get; set; }
 

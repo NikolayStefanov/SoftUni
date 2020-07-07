@@ -10,8 +10,8 @@ using P03_SalesDatabase.Data;
 namespace P03_SalesDatabase.Migrations
 {
     [DbContext(typeof(SalesContext))]
-    [Migration("20200707100113_ProductsAddColumnDescription")]
-    partial class ProductsAddColumnDescription
+    [Migration("20200707110449_SalesAddDateDefault")]
+    partial class SalesAddDateDefault
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,8 +34,9 @@ namespace P03_SalesDatabase.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
+                        .HasColumnType("varchar(80)")
+                        .HasMaxLength(80)
+                        .IsUnicode(false);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -68,8 +69,8 @@ namespace P03_SalesDatabase.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<double>("Quantity")
-                        .HasColumnType("float");
+                    b.Property<float>("Quantity")
+                        .HasColumnType("real");
 
                     b.HasKey("ProductId");
 
@@ -87,7 +88,9 @@ namespace P03_SalesDatabase.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");

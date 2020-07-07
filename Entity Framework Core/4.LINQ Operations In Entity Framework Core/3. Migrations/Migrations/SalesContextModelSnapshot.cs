@@ -32,8 +32,9 @@ namespace P03_SalesDatabase.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
+                        .HasColumnType("varchar(80)")
+                        .HasMaxLength(80)
+                        .IsUnicode(false);
 
                     b.Property<string>("Name")
                         .IsRequired()
