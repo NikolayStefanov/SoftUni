@@ -16,7 +16,7 @@ namespace P03_SalesDatabase.Data.Models
         public string Name { get; set; }
 
         [MaxLength(250)]
-        public string Desctiption { get; set; } = "No description";
+        public string Description { get; set; } = "No description";
 
         [Required]
         public float Quantity { get; set; }

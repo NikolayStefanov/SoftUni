@@ -26,8 +26,9 @@
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Customer>().Property(x => x.Email).IsUnicode(false);
-            modelBuilder.Entity<Product>().Property(x => x.Desctiption).HasDefaultValue("No description");
+            modelBuilder.Entity<Product>().Property(x => x.Description).HasDefaultValue("No description");
             modelBuilder.Entity<Sale>().Property(x => x.Date).HasDefaultValueSql("GETDATE()");
+
         }
         public virtual DbSet<Sale> Sales { get; set; }
         public virtual DbSet<Product> Products { get; set; }

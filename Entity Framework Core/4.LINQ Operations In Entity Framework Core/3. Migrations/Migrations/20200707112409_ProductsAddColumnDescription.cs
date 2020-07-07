@@ -29,7 +29,7 @@ namespace P03_SalesDatabase.Migrations
                     ProductId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(maxLength: 50, nullable: false),
-                    Desctiption = table.Column<string>(maxLength: 250, nullable: true, defaultValue: "No description"),
+                    Description = table.Column<string>(maxLength: 250, nullable: true, defaultValue: "No description"),
                     Quantity = table.Column<float>(nullable: false),
                     Price = table.Column<decimal>(nullable: false)
                 },

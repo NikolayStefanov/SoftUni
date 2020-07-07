@@ -10,8 +10,8 @@ using P03_SalesDatabase.Data;
 namespace P03_SalesDatabase.Migrations
 {
     [DbContext(typeof(SalesContext))]
-    [Migration("20200707110449_SalesAddDateDefault")]
-    partial class SalesAddDateDefault
+    [Migration("20200707112409_ProductsAddColumnDescription")]
+    partial class ProductsAddColumnDescription
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -55,7 +55,7 @@ namespace P03_SalesDatabase.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Desctiption")
+                    b.Property<string>("Description")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(250)")
                         .HasMaxLength(250)
@@ -88,9 +88,7 @@ namespace P03_SalesDatabase.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
