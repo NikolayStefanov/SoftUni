@@ -68,8 +68,19 @@
             //Console.WriteLine(resultEx11);
 
             //EXERCISE 12 - Profit by Category
-            var resultEx12 = GetTotalProfitByCategory(db);
-            Console.WriteLine(resultEx12);
+            //var resultEx12 = GetTotalProfitByCategory(db);
+            //Console.WriteLine(resultEx12);
+
+            //EXERCISE 13 - Most Recent Books
+            //var resultEx13 = GetMostRecentBooks(db);
+            //Console.WriteLine(resultEx13);
+
+            //EXERCISE 14 - Increase Prices
+            //IncreasePrices(db);
+
+            //EXERCISE 15 - Remove Books
+            //var resultEx15 = RemoveBooks(db);
+            //Console.WriteLine(resultEx15);
         }
 
         //EXERCISE 1 - Age Restriction
@@ -166,7 +177,7 @@
             var targetBooks = context.Books
                 .Where(b => b.ReleaseDate < newDate)
                 .OrderByDescending(b => b.ReleaseDate)
-                .Select(x => new { x.Title, x.EditionType, x.Price})
+                .Select(x => new { x.Title, x.EditionType, x.Price })
                 .ToList();
 
             var resultStr = new StringBuilder();
@@ -222,7 +233,7 @@
                     AuthorLastName = x.Author.LastName
                 })
                 .Where(x => x.AuthorLastName.ToLower().StartsWith(input.ToLower()))
-                .OrderBy(x=> x.BookId)
+                .OrderBy(x => x.BookId)
                 .ToList();
             var resultStr = new StringBuilder();
             foreach (var book in targetBooksAndAuthors)
@@ -279,6 +290,59 @@
                 resultStr.AppendLine($"{item.Name} ${item.TotalProfit:F2}");
             }
             return resultStr.ToString().TrimEnd();
+        }
+
+        //EXERCISE 13 - Most Recent Books
+        public static string GetMostRecentBooks(BookShopContext context)
+        {
+            var targetBooks = context.Categories
+                .Select(x => new
+                {
+                    x.Name,
+                    RecentBooks = x.CategoryBooks
+                        .Where(b => b.Book.ReleaseDate != null)
+                        .OrderByDescending(b => b.Book.ReleaseDate)
+                        .Select(b => new { BookName = b.Book.Title, RealeaseYear = b.Book.ReleaseDate.Value.Year })
+                        .Take(3)
+                })
+                .OrderBy(x => x.Name)
+                .ToList();
+            var resultStr = new StringBuilder();
+            foreach (var category in targetBooks)
+            {
+                resultStr.AppendLine($"--{category.Name}");
+                foreach (var book in category.RecentBooks)
+                {
+                    resultStr.AppendLine($"{book.BookName} ({book.RealeaseYear})");
+                }
+            }
+            return resultStr.ToString().TrimEnd();
+        }
+
+        //EXERCISE 14 - Increase Prices
+        public static void IncreasePrices(BookShopContext context)
+        {
+            var targetBooks = context.Books
+                .Where(x => x.ReleaseDate.Value.Year < 2010)
+                .ToList();
+            foreach (var book in targetBooks)
+            {
+                book.Price += 5;
+            }
+            context.SaveChanges();
+        }
+
+        //EXERCISE 15 - Remove Books
+        public static int RemoveBooks(BookShopContext context)
+        {
+            var targetBooks = context.Books
+                .Where(x => x.Copies < 4200)
+                .ToList();
+
+            context.RemoveRange(targetBooks);
+            context.SaveChanges();
+
+            return targetBooks.Count;
         }
     }
 }
