@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using Newtonsoft.Json;
 using ProductShop.Data;
 using ProductShop.Models;
@@ -15,32 +14,35 @@ namespace ProductShop
         public static void Main(string[] args)
         {
             var db = new ProductShopContext();
-            // ResetDatabase(db);
+            ResetDatabase(db);
 
             // EXERCISE 1 - Import Users
-            // string usersJson = File.ReadAllText("../../../Datasets/users.json");
-            // Console.WriteLine(ImportUsers(db, usersJson));
+            string usersJson = File.ReadAllText("../../../Datasets/users.json");
+            Console.WriteLine(ImportUsers(db, usersJson));
 
             // EXERCISE 2 - Import Products
-            // var productsJson = File.ReadAllText("../../../Datasets/products.json");
-            // Console.WriteLine(ImportProducts(db, productsJson));
+            var productsJson = File.ReadAllText("../../../Datasets/products.json");
+            Console.WriteLine(ImportProducts(db, productsJson));
 
             // EXERCISE 3 - Import Categories
-            // var categoriesJson = File.ReadAllText("../../../Datasets/categories.json");
-            // Console.WriteLine(ImportCategories(db, categoriesJson));
+            var categoriesJson = File.ReadAllText("../../../Datasets/categories.json");
+            Console.WriteLine(ImportCategories(db, categoriesJson));
 
             // EXERCISE 4 - Import Categories and Products
-            //var categoryProductsJson = File.ReadAllText("../../../Datasets/categories-products.json");
-            // Console.WriteLine(ImportCategoryProducts(db, categoryProductsJson));
+            var categoryProductsJson = File.ReadAllText("../../../Datasets/categories-products.json");
+            Console.WriteLine(ImportCategoryProducts(db, categoryProductsJson));
 
             //EXERCISE 5 - Export Products In Range
-            //Console.WriteLine(GetProductsInRange(db));
+            Console.WriteLine(GetProductsInRange(db));
 
             //EXERCISE 6 - Export Successfully Sold Products
-            //Console.WriteLine(GetSoldProducts(db));
+            Console.WriteLine(GetSoldProducts(db));
 
             //EXERCISE 7 - Export Categories by Products Count
             Console.WriteLine(GetCategoriesByProductsCount(db));
+
+            //EXERCISE 8 - Export Users and Products
+            Console.WriteLine(GetUsersWithProducts(db));
         }
 
         private static void ResetDatabase(ProductShopContext db)
@@ -124,16 +126,16 @@ namespace ProductShop
                 {
                     firstName = x.FirstName,
                     lastName = x.LastName,
-                    soldProducts = x.ProductsSold.Where(y=> y.Buyer != null).Select(b=> new 
-                        {
-                            name = b.Name,
-                            price = b.Price,
-                            buyerFirstName = b.Buyer.FirstName,
-                            buyerLastName = b.Buyer.LastName
-                        })
+                    soldProducts = x.ProductsSold.Where(y => y.Buyer != null).Select(b => new
+                    {
+                        name = b.Name,
+                        price = b.Price,
+                        buyerFirstName = b.Buyer.FirstName,
+                        buyerLastName = b.Buyer.LastName
+                    })
                 })
-                .OrderBy(x=> x.lastName)
-                .ThenBy(x=> x.firstName)
+                .OrderBy(x => x.lastName)
+                .ThenBy(x => x.firstName)
                 .ToList();
             var jsonResult = JsonConvert.SerializeObject(targetProducts, Formatting.Indented);
             return jsonResult;
@@ -150,10 +152,48 @@ namespace ProductShop
                     averagePrice = x.CategoryProducts.Average(p => p.Product.Price).ToString("F"),
                     totalRevenue = x.CategoryProducts.Sum(t => t.Product.Price).ToString("F")
                 })
-                .OrderByDescending(x=> x.productsCount)
+                .OrderByDescending(x => x.productsCount)
                 .ToList();
             var jsonResult = JsonConvert.SerializeObject(targetCategories, Formatting.Indented);
             return jsonResult;
+        }
+
+        //EXERCISE 8 - Export Users and Products
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            var targetUsers = context.Users
+                .Where(x => x.ProductsSold.Any(p => p.Buyer != null))
+                .OrderByDescending(x => x.ProductsSold.Count(p => p.Buyer != null))
+                .Select(x => new
+                {
+                    firstName = x.FirstName,
+                    lastName = x.LastName,
+                    age = x.Age,
+                    soldProducts = new
+                    {
+                        count = x.ProductsSold.Where(b => b.Buyer != null).Count(),
+                        products = x.ProductsSold.Where(b => b.Buyer != null).Select(ps => new
+                        {
+                            name = ps.Name,
+                            price = ps.Price
+                        }).ToList()
+                    }
+                }).ToList();
+
+            var usersResultObj = new
+            {
+                usersCount = targetUsers.Count,
+                users = targetUsers,
+            };
+
+            return JsonConvert.SerializeObject(usersResultObj,
+                                               new JsonSerializerSettings
+                                               {
+                                                   Formatting = Formatting.Indented
+                                                                          ,
+                                                   NullValueHandling = NullValueHandling.Ignore
+                                               }
+                                              );
         }
     }
 }
