@@ -17,37 +17,44 @@ namespace ProductShop
         public static void Main(string[] args)
         {
             var dbContext = new ProductShopContext();
-            //ResetDatabase(dbContext);
+            ResetDatabase(dbContext);
 
-            ////EXERCISE 1 - Import Users
-            //var usersXml = File.ReadAllText("../../../Datasets/users.xml");
-            //Console.WriteLine(ImportUsers(dbContext, usersXml));
+            //EXERCISE 1 - Import Users
+            var usersXml = File.ReadAllText("../../../Datasets/users.xml");
+            Console.WriteLine(ImportUsers(dbContext, usersXml));
 
-            ////EXERCISE 2 - Import Products
-            //var productsXml = File.ReadAllText("../../../Datasets/products.xml");
-            //Console.WriteLine(ImportProducts(dbContext, productsXml));
+            //EXERCISE 2 - Import Products
+            var productsXml = File.ReadAllText("../../../Datasets/products.xml");
+            Console.WriteLine(ImportProducts(dbContext, productsXml));
 
-            ////EXERCISE 3 - Import Categories
-            //var categoriesXml = File.ReadAllText("../../../Datasets/categories.xml");
-            //Console.WriteLine(ImportCategories(dbContext, categoriesXml));
+            //EXERCISE 3 - Import Categories
+            var categoriesXml = File.ReadAllText("../../../Datasets/categories.xml");
+            Console.WriteLine(ImportCategories(dbContext, categoriesXml));
 
-            ////EXERCISE 4 - Import Categories and Products
-            //var categoriesProductsXml = File.ReadAllText("../../../Datasets/categories-products.xml");
-            //Console.WriteLine(ImportCategoryProducts(dbContext, categoriesProductsXml));
+            //EXERCISE 4 - Import Categories and Products
+            var categoriesProductsXml = File.ReadAllText("../../../Datasets/categories-products.xml");
+            Console.WriteLine(ImportCategoryProducts(dbContext, categoriesProductsXml));
 
-            ////ЕXERCISE 5 - Export Products In Range
-            //var resultProducts = GetProductsInRange(dbContext);
-            //Console.WriteLine(resultProducts);
-            //File.WriteAllText("../../../ExportedXMLs/products-in-range.xml", resultProducts);
+            //ЕXERCISE 5 - Export Products In Range
+            var resultProducts = GetProductsInRange(dbContext);
+            Console.WriteLine(resultProducts);
+            File.WriteAllText("../../../ExportedXMLs/products-in-range.xml", resultProducts);
 
-            ////EXERCISE 6 - Export Sold Products
-            //var resultUsersWithSoldProducts = GetSoldProducts(dbContext);
-            //Console.WriteLine(resultUsersWithSoldProducts);
-            //File.WriteAllText("../../../ExportedXMLs/users-sold-products.xml", resultUsersWithSoldProducts);
+            //EXERCISE 6 - Export Sold Products
+            var resultUsersWithSoldProducts = GetSoldProducts(dbContext);
+            Console.WriteLine(resultUsersWithSoldProducts);
+            File.WriteAllText("../../../ExportedXMLs/users-sold-products.xml", resultUsersWithSoldProducts);
 
             //EXERCISE 7 -  Export Categories By Products Count
             var resultCategories = GetCategoriesByProductsCount(dbContext);
             Console.WriteLine(resultCategories);
+            File.WriteAllText("../../../ExportedXMLs/categories-by-products.xml", resultCategories);
+
+            //EXERCISE 8 - Users and Products
+            var resultUsersAndSoldProduts = GetUsersWithProducts(dbContext);
+            Console.WriteLine(resultUsersAndSoldProduts);
+            File.WriteAllText("../../../ExportedXMLs/users-and-products.xml", resultUsersAndSoldProduts);
+
         }
         private static void ResetDatabase(ProductShopContext context)
         {
@@ -183,6 +190,44 @@ namespace ProductShop
                 .ThenBy(x => x.TotalRevenue)
                 .ToArray();
             var resultXml = XmlConverter.Serialize(targetCategories, rootElement);
+            return resultXml;
+        }
+
+        //EXERCISE 8 - Users and Products
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            var targetUsers = context.Users
+                .ToArray()
+                .Where(x=> x.ProductsSold.Any())
+                .Select(x => new UserInfo
+                {
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    Age = x.Age,
+                    SoldProducts = new SoldProductCount
+                    {
+                        Count = x.ProductsSold.Count,
+                        Products = x.ProductsSold.Select(p => new SoldProduct
+                        {
+                            Name = p.Name,
+                            Price = p.Price
+                        })
+                        .OrderByDescending(p=> p.Price)
+                        .ToList()
+                    }
+                })
+                .OrderByDescending(x => x.SoldProducts.Count)
+                .Take(10)
+                .ToList();
+
+            var finalObj = new ExportUserCountDto
+            {
+                Count = context.Users.Count(x=> x.ProductsSold.Any()),
+                Users = targetUsers
+            };
+
+            const string rootName = "Users";
+            var resultXml = XmlConverter.Serialize(finalObj, rootName);
             return resultXml;
         }
     }
