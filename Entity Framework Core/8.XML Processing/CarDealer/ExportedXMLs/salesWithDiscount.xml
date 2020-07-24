@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-16"?>
+<sales>
+  <sale>
+    <car make="Opel" model="Corsa" travelled-distance="282499542" />
+    <discount>15.00</discount>
+    <customer-name>Daniele Zarate</customer-name>
+    <price>328.97</price>
+    <price-with-discount>279.62</price-with-discount>
+  </sale>
+  <sale>
+    <car make="Opel" model="Corsa" travelled-distance="267253567" />
+    <discount>20.00</discount>
+    <customer-name>Faustina Burgher</customer-name>
+    <price>258.97</price>
+    <price-with-discount>207.18</price-with-discount>
+  </sale>
+  <sale>
+    <car make="BMW" model="M6 E63" travelled-distance="69863204" />
+    <discount>15.00</discount>
+    <customer-name>Marcelle Griego</customer-name>
+    <price>3346.32</price>
+    <price-with-discount>2844.37</price-with-discount>
+  </sale>
+  <sale>
+    <car make="BMW" model="F20" travelled-distance="487897422" />
+    <discount>30.00</discount>
+    <customer-name>Audrea Cardinal</customer-name>
+    <price>1980.24</price>
+    <price-with-discount>1386.17</price-with-discount>
+  </sale>
+  <sale>
+    <car make="Opel" model="Kadet" travelled-distance="31737446" />
+    <discount>50.00</discount>
+    <customer-name>Donnetta Soliz</customer-name>
+    <price>1018.32</price>
+    <price-with-discount>509.16</price-with-discount>
+  </sale>
+  <sale>
+    <car make="Opel" model="Insignia" travelled-distance="339785118" />
+    <discount>0.00</discount>
+    <customer-name>Lino Subia</customer-name>
+    <price>1919.23</price>
+    <price-with-discount>1919.23</price-with-discount>
+  </sale>
+  <sale>
+    <car make="BMW" model="F25" travelled-distance="476132712" />
+    <discount>10.00</discount>
+    <customer-name>Ann Mcenaney</customer-name>
+    <price>489.20</price>
+    <price-with-discount>440.28</price-with-discount>
+  </sale>
+  <sale>
+    <car make="BMW" model="M6 E63" travelled-distance="57189891" />
+    <discount>0.00</discount>
+    <customer-name>Zada Attwood</customer-name>
+    <price>1141.88</price>
+    <price-with-discount>1141.88</price-with-discount>
+  </sale>
+  <sale>
+    <car make="Opel" model="Corsa" travelled-distance="347259126" />
+    <discount>30.00</discount>
+    <customer-name>Hai Everton</customer-name>
+    <price>4219.19</price>
+    <price-with-discount>2953.43</price-with-discount>
+  </sale>
+</sales>
