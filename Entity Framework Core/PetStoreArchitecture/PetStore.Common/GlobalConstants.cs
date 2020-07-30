@@ -23,5 +23,10 @@ namespace PetStore.Common
         //BREED
         public const int BreedNameMinLength = 3;
         public const int BreedNameMaxLength = 30;
+
+        //PRODUCT
+        public const double ProductMinprice = 0;
+        public const int ProductNameMinLength = 2;
+        public const int ProductNameMaxLength = 30;
     }
 }

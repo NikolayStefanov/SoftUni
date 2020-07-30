@@ -1,5 +1,4 @@
-﻿using PetStore.Data;
-using System;
+﻿using System;
 
 namespace PetStore.ConsoleApplication
 {
@@ -7,8 +6,6 @@ namespace PetStore.ConsoleApplication
     {
         static void Main(string[] args)
         {
-            var dbContext = new PetStoreDbContext();
-            dbContext.Database.EnsureDeleted();
         }
     }
 }

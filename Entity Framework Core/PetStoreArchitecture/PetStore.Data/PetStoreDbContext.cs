@@ -45,6 +45,11 @@ namespace PetStore.Data
             {
                 entity.Ignore(x => x.TotalPrice);
             });
+
+            modelBuilder.Entity<Product>(entity =>
+            {
+                entity.HasAlternateKey(x => x.Name);
+            });
         }
     }
 }

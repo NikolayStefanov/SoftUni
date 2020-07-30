@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PetStore.ServiceModels.Products.InputModels
 {
-    public class AddProductInputServiceModel
+    public class EditProductInputServiceModel
     {
         [Required, MinLength(GlobalConstants.ProductNameMinLength), MaxLength(GlobalConstants.ProductNameMaxLength)]
         public string Name { get; set; }

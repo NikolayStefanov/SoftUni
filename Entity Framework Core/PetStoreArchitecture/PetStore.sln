@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore.Models", "PetStore
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore.Data", "PetStore.Data\PetStore.Data.csproj", "{B9AD1EC6-7A54-4DE7-B255-DDA36F6B4BBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.Common", "PetStore.Common\PetStore.Common.csproj", "{D6FB1AC8-5D94-4B1A-86DE-D464D18EF9F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore.Common", "PetStore.Common\PetStore.Common.csproj", "{D6FB1AC8-5D94-4B1A-86DE-D464D18EF9F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.ConsoleApplication", "PetStore.ConsoleApplication\PetStore.ConsoleApplication.csproj", "{39B8C355-50D1-4506-850C-B31FC29BADCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore.ConsoleApplication", "PetStore.ConsoleApplication\PetStore.ConsoleApplication.csproj", "{39B8C355-50D1-4506-850C-B31FC29BADCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.Services", "PetStore.Services\PetStore.Services.csproj", "{0E93155D-C2B9-4177-80D5-8499225273CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore.Services", "PetStore.Services\PetStore.Services.csproj", "{0E93155D-C2B9-4177-80D5-8499225273CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.ServiceModels", "PetStore.ServiceModels\PetStore.ServiceModels.csproj", "{61F4B2D5-15BA-449A-ADF1-78012D067619}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore.ServiceModels", "PetStore.ServiceModels\PetStore.ServiceModels.csproj", "{61F4B2D5-15BA-449A-ADF1-78012D067619}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.Mapping", "PetStore.Mapping\PetStore.Mapping.csproj", "{8A1C8F5E-3B29-4F90-B459-AF4732AC0A61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{61F4B2D5-15BA-449A-ADF1-78012D067619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61F4B2D5-15BA-449A-ADF1-78012D067619}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61F4B2D5-15BA-449A-ADF1-78012D067619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A1C8F5E-3B29-4F90-B459-AF4732AC0A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A1C8F5E-3B29-4F90-B459-AF4732AC0A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A1C8F5E-3B29-4F90-B459-AF4732AC0A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A1C8F5E-3B29-4F90-B459-AF4732AC0A61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
