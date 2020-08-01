@@ -1,0 +1,51 @@
+﻿@model PetStore.ViewModels.Product.OutputModels.ProductDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+    
+
+<div>
+    <div class="text-center">
+        <h1>Product Details</h1>
+    </div>
+    <hr />
+    <div class=" text-center">
+        <dl>
+            <div class="custom-control-inline col">
+                <dt class="col-sm-8">
+
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+            </div>
+            
+            <div class="custom-control-inline col">
+                <dt class="col-sm-8">
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+            </div>
+            
+            <div class="custom-control-inline col">
+                <dt class="col-sm-8">
+                    @Html.DisplayNameFor(model => model.Type)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Type)
+                </dd>
+            </div>
+            
+        </dl>
+    </div>
+    
+</div>
+<div class="text-center">
+    <a class="btn btn-success" asp-action="Edit" asp-route-id="">Edit</a>
+    <a class="btn btn-primary" asp-action="Index">Back to List</a>
+</div>

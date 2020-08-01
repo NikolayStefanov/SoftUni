@@ -4,9 +4,10 @@ using System.Collections.Generic;
 
 namespace PetStore.Services.Interfaces
 {
-    interface IProductService 
+    public interface IProductService 
     {
         void AddProduct(AddProductInputServiceModel model);
+        ProductDetailsServiceModel GetById(string id);
         List<ListAllProductsByProductTypeServiceModel> ListAllByProductType(string type);
         List<ListAllProductsServiceModels> GetAll();
         List<ListAllProductsByNameServiceModel> ListAllByName(string name, bool caseSensetive);
