@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpRequester", "HttpRequester.csproj", "{CA9B1616-6EEC-4118-9C43-72D08B263175}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOwnHttpRequester", "..\ConsoleApp1\MyOwnHttpRequester.csproj", "{74CC6B20-1CE4-4D1D-AE61-58030B662D6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA9B1616-6EEC-4118-9C43-72D08B263175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA9B1616-6EEC-4118-9C43-72D08B263175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA9B1616-6EEC-4118-9C43-72D08B263175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA9B1616-6EEC-4118-9C43-72D08B263175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74CC6B20-1CE4-4D1D-AE61-58030B662D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74CC6B20-1CE4-4D1D-AE61-58030B662D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74CC6B20-1CE4-4D1D-AE61-58030B662D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74CC6B20-1CE4-4D1D-AE61-58030B662D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2613AE44-B19D-4319-B40C-CFC00ED989F9}
+	EndGlobalSection
+EndGlobal
