@@ -3,8 +3,9 @@ using SUS.MVC.Framework;
 
 namespace MyFirstMvcApp.Controllers
 {
+
     public class CardsController : Controller
-    {
+    { 
         public HttpResponse Add(HttpRequest request)
         {
             return this.View();
