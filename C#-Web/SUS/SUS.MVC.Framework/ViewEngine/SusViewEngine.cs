@@ -30,8 +30,8 @@ namespace SUS.MVC.Framework.ViewEngine
                     var modelName = viewModel.GetType().FullName;
 
                     var genericArguments = viewModel.GetType().GenericTypeArguments;
-                    typeOfModel = modelName.Substring(modelName.IndexOf('`')) 
-                        + "<"+ string.Join(",", genericArguments.Select(x=> x.FullName)) +">";
+                    typeOfModel = modelName.Substring(0,modelName.IndexOf('`'))
+                        + "<" + string.Join(",", genericArguments.Select(x => x.FullName)) + ">";
                 }
                 else
                 {
@@ -45,10 +45,9 @@ using System.Text;
 using System.Linq;
 using System.Collections.Generic;
 using SUS.MVC.Framework.ViewEngine;
-
 namespace ViewNamespace
 {
-    public class ViewClass :  IView
+    public class ViewClass : IView
     {
         public string ExecuteTemplate(object viewModel)
         {
@@ -71,7 +70,7 @@ namespace ViewNamespace
             string line;
             while ((line = sr.ReadLine()) != null)
             {
-                if (supportedOperators.Any(o=> line.TrimStart().StartsWith("@" + o)))
+                if (supportedOperators.Any(o => line.TrimStart().StartsWith("@" + o)))
                 {
                     var atSignLocation = line.IndexOf("@");
                     line = line.Remove(atSignLocation, 1);
@@ -94,7 +93,7 @@ namespace ViewNamespace
                         var lineAfterAtSign = line.Substring(atSignLocation + 1);
                         var code = csharpCodeRegex.Match(lineAfterAtSign).Value;
                         csharpCode.Append(code + " + @\"");
-                        line =lineAfterAtSign.Substring(code.Length);
+                        line = lineAfterAtSign.Substring(code.Length);
                     }
 
                     csharpCode.AppendLine(line.Replace("\"", "\"\"") + "\");");
@@ -122,26 +121,32 @@ namespace ViewNamespace
                 compileResult = compileResult.AddReferences(MetadataReference.CreateFromFile(Assembly.Load(library).Location));
             }
 
-            compileResult =  compileResult.AddSyntaxTrees(SyntaxFactory.ParseSyntaxTree(csharpCode));
+            compileResult = compileResult.AddSyntaxTrees(SyntaxFactory.ParseSyntaxTree(csharpCode));
             using MemoryStream memoryStream = new MemoryStream();
             EmitResult result = compileResult.Emit(memoryStream);
             if (!result.Success)
             {
                 return new ErrorView(result.Diagnostics
                     .Where(x => x.Severity == DiagnosticSeverity.Error)
-                    .Select(x=> x.GetMessage()), csharpCode);
+                    .Select(x => x.GetMessage()), csharpCode);
             }
 
-            memoryStream.Seek(0, SeekOrigin.Begin);
-            var byteAssembly = memoryStream.ToArray();
-            var assembly = Assembly.Load(byteAssembly);
-            var viewType = assembly.GetType("ViewNamespace.ViewClass");
-            var instance = Activator.CreateInstance(viewType);
-            return instance as IView;
-            //Roslyn
-            //C# -> executable -> IView -> ExecuteTemplate()
+            try
+            {
+                memoryStream.Seek(0, SeekOrigin.Begin);
+                var byteAssembly = memoryStream.ToArray();
+                var assembly = Assembly.Load(byteAssembly);
+                var viewType = assembly.GetType("ViewNamespace.ViewClass");
+                var instance = Activator.CreateInstance(viewType);
+                return (instance as IView)
+                    ?? new ErrorView(new List<string> { "Instance is null!" }, csharpCode);
+            }
+            catch (Exception ex)
+            {
+                return new ErrorView(new List<string> { ex.ToString() }, csharpCode);
+            }
         }
-
-        
+        //Roslyn
+        //C# -> executable -> IView -> ExecuteTemplate()
     }
 }

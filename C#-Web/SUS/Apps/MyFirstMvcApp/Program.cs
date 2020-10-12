@@ -1,10 +1,4 @@
-﻿using MyFirstMvcApp.Controllers;
-using SUS.HTTP;
-using SUS.MVC.Framework;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+﻿using SUS.MVC.Framework;
 using System.Threading.Tasks;
 
 namespace MyFirstMvcApp

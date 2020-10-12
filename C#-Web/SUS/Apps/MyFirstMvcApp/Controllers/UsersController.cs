@@ -3,17 +3,17 @@ using SUS.MVC.Framework;
 using System.IO;
 using System.Text;
 
-namespace MyFirstMvcApp.Controllers
+namespace BattleCards.Controllers
 {
     public class UsersController : Controller
     {
-        public HttpResponse Login(HttpRequest request)
+        public HttpResponse Login()
         {
             return this.View();
         }
 
         [HttpPost]
-        public HttpResponse DoLogin(HttpRequest request)
+        public HttpResponse DoLogin()
         {
             //TODO: read data
             //TODO: check user
@@ -23,7 +23,7 @@ namespace MyFirstMvcApp.Controllers
             return this.Redirect("/");
         }
 
-        public HttpResponse Register(HttpRequest arg)
+        public HttpResponse Register()
         {
             return this.View();
 

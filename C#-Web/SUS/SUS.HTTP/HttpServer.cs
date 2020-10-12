@@ -35,51 +35,58 @@ namespace SUS.HTTP
 
         private async Task ProcessClientAsync(TcpClient tcpClient)
         {
-                using NetworkStream stream = tcpClient.GetStream();
+            using NetworkStream stream = tcpClient.GetStream();
 
-                //TODO: research if there is faster data structure for array of bytes
-                List<byte> data = new List<byte>();
-                int position = 0;
-                byte[] buffer = new byte[HttpConstants.BufferSize]; // called Chunck
-                while (true)
+            //TODO: research if there is faster data structure for array of bytes
+            List<byte> data = new List<byte>();
+            int position = 0;
+            byte[] buffer = new byte[HttpConstants.BufferSize]; // called Chunck
+            while (true)
+            {
+                int count = await stream.ReadAsync(buffer, 0, buffer.Length);
+                position += count;
+
+                if (count < buffer.Length)
                 {
-                    int count = await stream.ReadAsync(buffer, 0, buffer.Length);
-                    position += count;
-
-                    if (count < buffer.Length)
-                    {
-                        var partialBuffer = new byte[count];
-                        Array.Copy(buffer, partialBuffer, count);
-                        data.AddRange(partialBuffer);
-                        break;
-                    }
-                    else
-                    {
-                        data.AddRange(buffer);
-                    }
-                }
-                var requestAsString = Encoding.UTF8.GetString(data.ToArray());
-                var request = new HttpRequest(requestAsString);
-                Console.WriteLine($"{request.Method} {request.Path}=> {request.Headers.Count} with {request.Cookies.Count} cookies!");
-
-                HttpResponse response;
-                var route = this.routeTable.FirstOrDefault(x => string.Compare(x.Path, request.Path, true) == 0 &&
-                x.HttpMethod == request.Method);
-                if (route != null)
-                {
-                    response = route.Action(request);
+                    var partialBuffer = new byte[count];
+                    Array.Copy(buffer, partialBuffer, count);
+                    data.AddRange(partialBuffer);
+                    break;
                 }
                 else
                 {
-                    //404 Not Found
-                    response = new HttpResponse("text/html", new byte[0], HttpStatusCode.NotFound);
+                    data.AddRange(buffer);
                 }
+            }
+            var requestAsString = Encoding.UTF8.GetString(data.ToArray());
+            var request = new HttpRequest(requestAsString);
+            Console.WriteLine($"{request.Method} {request.Path}=> {request.Headers.Count} with {request.Cookies.Count} cookies!");
 
+            HttpResponse response;
+            var route = this.routeTable.FirstOrDefault(x => string.Compare(x.Path, request.Path, true) == 0 &&
+            x.HttpMethod == request.Method);
+            if (route != null)
+            {
+                response = route.Action(request);
+            }
+            else
+            {
+                //404 Not Found
+                response = new HttpResponse("text/html", new byte[0], HttpStatusCode.NotFound);
+            }
 
-                response.Cookies.Add(new ResponseCookie("sid", Guid.NewGuid().ToString()) { HttpOnly = true, MaxAge = 30 * 24 * 60 * 60 });
-                var responseHeaderBytes = Encoding.UTF8.GetBytes(response.ToString());
-                await stream.WriteAsync(responseHeaderBytes, 0, responseHeaderBytes.Length);
-                await stream.WriteAsync(response.Body, 0, response.Body.Length);
+            response.Headers.Add(new Header("Server", "SUS Server 1.0"));
+            var sessionCookie = request.Cookies.FirstOrDefault(x => x.Name == HttpConstants.SessionCookieName);
+            if (sessionCookie != null)
+            {
+                var responseSessionCookie = new ResponseCookie(sessionCookie.Name, sessionCookie.Value);
+                responseSessionCookie.Path = "/";
+                response.Cookies.Add(responseSessionCookie);
+            }
+
+            var responseHeaderBytes = Encoding.UTF8.GetBytes(response.ToString());
+            await stream.WriteAsync(responseHeaderBytes, 0, responseHeaderBytes.Length);
+            await stream.WriteAsync(response.Body, 0, response.Body.Length);
         }
     }
 }

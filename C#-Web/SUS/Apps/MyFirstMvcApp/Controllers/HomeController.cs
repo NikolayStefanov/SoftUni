@@ -1,15 +1,14 @@
-﻿using MyFirstMvcApp.ViewModels;
+﻿using BattleCards.ViewModels;
 using SUS.HTTP;
 using SUS.MVC.Framework;
 using System;
-using System.Text;
 
-namespace MyFirstMvcApp.Controllers
+namespace BattleCards.Controllers
 {
     public class HomeController : Controller
     {
         [HttpGet("/")]
-        public  HttpResponse Index(HttpRequest request)
+        public  HttpResponse Index()
         {
             var viewModel = new IndexViewModel();
 
@@ -19,7 +18,7 @@ namespace MyFirstMvcApp.Controllers
             return this.View(viewModel);
         }
 
-        public HttpResponse About(HttpRequest request)
+        public HttpResponse About()
         {
             return this.View();
         }
