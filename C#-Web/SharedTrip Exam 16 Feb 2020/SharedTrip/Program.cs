@@ -1,5 +1,4 @@
 ﻿using SUS.MvcFramework;
-using System;
 using System.Threading.Tasks;
 
 namespace SharedTrip

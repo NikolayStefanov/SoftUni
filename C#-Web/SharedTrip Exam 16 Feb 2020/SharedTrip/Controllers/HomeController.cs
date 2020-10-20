@@ -1,8 +1,5 @@
 ﻿using SUS.HTTP;
 using SUS.MvcFramework;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SharedTrip.Controllers
 {
@@ -11,6 +8,10 @@ namespace SharedTrip.Controllers
         [HttpGet("/")]
         public HttpResponse Index()
         {
+            if (this.IsUserSignedIn())
+            {
+                return this.Redirect("/Trips/All");
+            }
             return this.View();
         }
     }
