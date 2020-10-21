@@ -38,6 +38,10 @@ namespace SharedTrip.Services
 
             try
             {
+                if (targetTrip.Seats == 0)
+                {
+                    return false;
+                }
                 this.db.UserTrips.Add(new UserTrip { TripId = tripId, UserId = userId });
                 targetTrip.Seats -= 1;
                 this.db.SaveChanges();
@@ -72,7 +76,7 @@ namespace SharedTrip.Services
                 TripId = t.Id,
                 StartPoint = t.StartPoint,
                 EndPoint = t.EndPoint,
-                DepartureTime = t.DepartureTime.ToString("dd.MM.yyyy HH:mm"),
+                DepartureTime = t.DepartureTime.ToString("s"),
                 Seats = t.Seats,
                 Description = t.Description,
                 ImagePath = t.ImagePath

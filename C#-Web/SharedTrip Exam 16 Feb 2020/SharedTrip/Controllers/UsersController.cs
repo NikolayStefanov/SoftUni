@@ -2,6 +2,7 @@
 using SharedTrip.ViewModels.Users;
 using SUS.HTTP;
 using SUS.MvcFramework;
+using System.ComponentModel.DataAnnotations;
 
 namespace SharedTrip.Controllers
 {
@@ -53,6 +54,14 @@ namespace SharedTrip.Controllers
                 return this.Register();
             }
             if (inputModel.Password.Length < 6 || inputModel.Password.Length > 20)
+            {
+                return this.Register();
+            }
+            if (!new EmailAddressAttribute().IsValid(inputModel.Email))
+            {
+                return this.Register();
+            }
+            if (!this.userService.IsEmailAvailable(inputModel.Email) || !this.userService.IsUsernameAvailable(inputModel.Username))
             {
                 return this.Register();
             }
