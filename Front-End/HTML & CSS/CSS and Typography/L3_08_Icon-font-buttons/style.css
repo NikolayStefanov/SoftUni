@@ -1,0 +1,15 @@
+@import "https://use.fontawesome.com/releases/v5.10.2/css/all.css";
+p{
+    width: 100px;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+body > p:nth-child(1){
+    background-color: green;
+}
+body > p:nth-child(2){
+    background-color: orange;
+}
