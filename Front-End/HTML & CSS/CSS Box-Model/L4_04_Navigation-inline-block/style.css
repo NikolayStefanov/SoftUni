@@ -1,0 +1,28 @@
+html{
+    font-family:  Helvetica, sans-serif;
+}
+body{
+    width: auto;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+header h1{
+    display: inline;
+    margin-right: 10%;
+}
+nav{
+    display: inline-block;
+}
+nav ul {
+    display: inline-block;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: green;
+}

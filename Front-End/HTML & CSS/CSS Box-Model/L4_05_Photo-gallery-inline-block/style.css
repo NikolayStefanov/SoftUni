@@ -1,0 +1,17 @@
+body{
+    background-color: lightgray;
+    width: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+li{
+    list-style-type: none;
+    border: solid 0.4rem black;
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-right: 15px;
+}
+img{
+    padding: 10px;
+    max-height: 350px;
+}
