@@ -1,0 +1,46 @@
+html{
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+}
+body{
+    
+    margin-left: 20%;
+    margin-right: 20%;
+    background: rgb(238, 238, 238);
+}
+h1 p.site-title{
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+}
+img{
+    border: 3px solid black;
+    padding: 6px;
+    margin: 15px;
+}
+img.firstPicture{
+    float: right;
+}
+img.secondPicture{
+    float: left;
+}
+div.preBlockquoteParagraph{
+    max-width: 50%;
+    float: left;
+}
+div.blockquoteParagraph{
+    max-width: 50%;
+    float: right;
+    font-style: italic;
+}
+blockquote{
+    float: right;
+}
+h1,h2,h3,h4,h5,h6,blockquote{
+    font-family: Georgia, serif;
+}
+div p.authorName{
+    text-align: right;
+}

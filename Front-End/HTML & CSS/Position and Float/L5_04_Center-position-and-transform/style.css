@@ -1,0 +1,50 @@
+html{
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+}
+h1,h2,h3,h4,h5,h6{
+    font: 1em/1.2 Georgia, serif;
+    font-weight: bold;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(238, 238, 238) ;
+}
+section.card{
+    background: rgb(255, 255, 255);
+    width: 25%;
+    margin-top: 80px;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius: 4px;
+    box-shadow: -1px 2px 14px 4px rgba(0,0,0,0.48);
+}
+.card-content{
+    padding: 20px;
+    position: absolute;
+    background-color: white;
+    width: 25%;
+    top: 46%;
+}
+.card-content-btn{
+    background: rgb(0, 153, 0);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+.card-image{
+    position: relative;
+}
+.card-image img{
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: absolute;
+}
