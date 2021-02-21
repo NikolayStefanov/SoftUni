@@ -1,0 +1,23 @@
+body{
+    background: #EEEEEE;
+    margin: 100px, auto;
+    display: flex;
+    flex-direction: column;
+}
+header, main, aside, footer{
+    box-shadow: 0px 0px 3px black;
+    background: white;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 6px;
+}
+.mainAside{
+    display: flex;
+    min-height: 300px;
+}
+main{
+    flex-grow: 3;
+}
+aside{
+    flex-grow: 1;
+}

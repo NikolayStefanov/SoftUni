@@ -1,0 +1,22 @@
+body{
+    margin: 50px;
+}
+header{
+    border-bottom: 2px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    text-transform: uppercase;
+}
+header ul{
+    display: flex;
+}
+nav li {
+    list-style-type: none;
+    margin-right: 30px;
+}
+li a{
+    color: rgb(0, 153, 0);
+    text-decoration: none;
+}

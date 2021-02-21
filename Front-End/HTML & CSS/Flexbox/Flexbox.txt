@@ -1,0 +1,17 @@
+		FLEXBOX
+
+1.Flex container
+	1.1 display: flex; - това става display parent. Всички негови First-child елементи са ни влизат във флексбокса.
+	1.2 flex-direction - по ред или колона да ни подреди контейнерите. По дефоут ни ги подрежда в ред. (row/column/row-reverse/column-reverse)
+	1.3 flex: wrap; - за overflow
+	1.4 flex-flow: <flex-direction> || <flex-wrap>; - шорт-хенд пропърти.
+	1.5 justify-content: 
+		-flex-start/center/flex-end0/
+		-space-around(разпростира елементите в цялата ширина с равно отстояние между елементите)/
+		-space-between - ако има два елемента - единия отива най-вляво другия най-вдясно
+	1.6 aling-items: flex-start/flex-end/центер - подрежда ги отдолу,отгоре, и т.н. 
+		-stretch (когато имаме 3 елемента с различна височина и искаме и трите да са високи колкото най-високия)
+		- baseline - взима средната линия и слага центъра на всички елементи да е на бейслайна и т.н. на самия елемент. 
+		
+	1.7 Align-content- като justify-content, Но за main axes (ветикално)
+	1.8 Align-self - работи като align-items но се прилага само на един флексбокс елемент, а не на всички. 

@@ -1,0 +1,32 @@
+html, *{
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+}
+.container,
+section{
+    display: flex;
+}
+.container{
+    max-width: 65vw;
+    margin: 60px auto;
+    align-items: stretch;
+}
+span{
+    border: 1px solid black;
+    padding: 25px;
+    flex-grow: 1;
+}
+.week{
+    flex-wrap: wrap;
+}
+.week span:nth-child(1), span:nth-child(7){
+    flex-basis: 100%;
+}
+.notes{
+    flex-direction: column;
+}
+.notes span{
+    flex-basis: 50%;
+}
