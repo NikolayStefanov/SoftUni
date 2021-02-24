@@ -1,0 +1,29 @@
+body{
+    background: #EEEEEE;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+body, ul, li{
+    display: flex;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: GEorgia, serif;
+    font-size: 1em;
+}
+ul{
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+li{
+    border: 10px solid black;
+    padding: 15px;
+    margin: 20px;
+    align-items: stretch;
+    background: white;
+    box-shadow: 0px 0px 25px black;
+}
+img{
+    flex-basis: 100%;
+    align-self: center;
+}

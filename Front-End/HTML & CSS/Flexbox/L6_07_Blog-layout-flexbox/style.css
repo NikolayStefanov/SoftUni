@@ -1,0 +1,34 @@
+body{
+    background: rgb(238, 238, 238);
+    margin-left: 15%;
+    margin-right: 15%;
+}
+img{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border: 5px solid black;
+}
+.page{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}
+blockquote{
+    font-family: Georgia, serif;
+}
+a{
+    color: rgb(0, 153, 0);
+}
+header{
+    flex-basis: 100%;
+}
+header h1{
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: Georgia, serif;
+}

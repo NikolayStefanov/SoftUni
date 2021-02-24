@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    background: rgb(238, 238, 238);
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+footer{
+    color: rgb(255,255,255);
+    background-color: rgb(102, 102, 102);
+}
+header{
+    border-bottom: 3px solid black;
+}
+main{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+header h1{
+    margin-left: 10px;
+}
+footer{
+    position: sticky;
+}
+footer p{
+    padding-left: 10px;
+}
