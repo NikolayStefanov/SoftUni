@@ -1,0 +1,30 @@
+@media all and (max-width: 600px){
+    .navigation{
+        flex-direction: column;
+    }
+    .navigation-list{
+        flex-direction: column;
+        margin-top: 35px;
+    }
+    .header-img-wrapper{
+        display: none;
+    }
+    .benefits{
+        flex-direction: column;
+        align-items: center;
+    }
+    .benefit{
+        max-width: 400px;
+    }
+    .cta-section{
+        max-width: 290px;
+    }
+    .info-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-section-item{
+        max-width: 340px;
+        margin-bottom: 70px;
+    }
+}

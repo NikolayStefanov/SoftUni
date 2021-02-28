@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import "https://use.fontawesome.com/releases/v5.10.2/css/all.css";
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background: #66B9F8;
+}
+.site{
+    margin: 100px auto;
+    margin-left: 5%;
+    margin-right: 4%;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: Montserrat;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+.articles{
+    display: flex;
+    margin-bottom: 50px;
+}
+.blog-article{
+    margin-right: 25px;
+}
+.article-photo{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.article-content{
+    background: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px;
+    margin-top: -5px;
+}
+.articles-header{
+    color: #FF9822;
+    font-weight: 900;
+}
+.calendar-time{
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+}
+.write-article-anchor{
+    text-decoration: none;
+    color: #FF9822;
+    font-weight: bold;
+}
+.site-footer{
+    margin-right: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.all-articles-btn{
+    border: 3px solid white;
+    background: transparent;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}

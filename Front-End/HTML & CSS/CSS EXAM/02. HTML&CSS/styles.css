@@ -1,0 +1,181 @@
+@import 'https://use.fontawesome.com/releases/v5.15.2/css/all.css';
+
+body, * {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica", sans-serif;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 20px auto;
+}
+
+.navigation-logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-logo {
+    font-size: 38px;
+    border-right: 1px solid gray;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.navigation-list {
+    display: flex;
+}
+
+.navigation-list-item {
+    list-style: none;
+    text-transform: uppercase;
+    background: #ECECEC;
+    padding: 20px 14px;
+    margin: 0 1px;
+}
+
+.navigation-list-item:nth-child(1) {
+    background: #2cbce7;
+}
+
+.navigation-list-item:nth-child(1) a {
+    color: white;
+    font-size: 15px;
+}
+
+.navigation-list-item-link {
+    text-decoration: none;
+    color: black;
+}
+
+.header-img-wrapper {
+    width: 100%;
+}
+
+.header-img-wrapper img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.header-content {
+    background: #2cbce7;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    margin-top: -10px;
+}
+
+.header-content-text {
+    width: 60%;
+    margin: 0 auto;
+    line-height: 40px;
+}
+
+.header-content-text a{
+    color: white;
+}
+
+.benefits {
+    background: #383838;
+    display: flex;
+    padding: 30px;
+}
+
+.benefit-icon-wrapper {
+    color: #fff;
+    background: #2cbce7;
+    padding: 20px;
+    display: block;
+    width: max-content;
+    margin: 20px auto;
+}
+
+.benefit-icon-wrapper i {
+    font-size: 40px;
+}
+
+.benefit-item-heading {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 auto 20px auto;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+    width: 60%;
+}
+
+.benefit-item-text {
+    text-align: center;
+    color: lightgray;
+    line-height: 30px;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+
+.cta-section {
+    width: 60%;
+    margin: 80px auto;
+    color: #383838;
+    text-align: center;
+}
+
+.cta-section-title {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.cta-section-button {
+    background: #2cbce7;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.info-section {
+    background: #383838;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 70px;
+}
+
+.info-section-item {
+    width: 400px;
+}
+
+.info-section-item-title {
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.info-section-item-text {
+    color: gray;
+    line-height: 30px;
+}
+
+footer {
+    background: #2cbce7;
+    color: lightgray;
+    padding: 40px;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}

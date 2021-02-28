@@ -1,0 +1,162 @@
+@import "https://use.fontawesome.com/releases/v5.10.2/css/all.css";
+
+body{
+    font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+.page-header{
+    background: #41BEAD;
+    display: flex;
+    justify-content: space-between;
+}
+.softuni-logo{
+    max-width: 70px;
+    padding-left: 10%;
+}
+.page-navigation{
+    padding-right: 10%;
+}
+.navigation-list{
+    display: flex;
+}
+.navigation-item{
+    margin-right: 25px;
+    text-decoration: none;
+    list-style: none;
+}
+.navigation-item a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.page-main{
+    display: flex;
+    flex-direction: column;
+}
+.main-header{
+    background: #FFB402;
+    color: white;
+    padding: 0 25% 3% 25%;
+    text-align: center;
+}
+
+.main-trainers{
+    display: flex;
+    margin: 5% 5% 10% 5%;
+}
+.trainter-article{
+    margin-right: 5%;
+    display: flex;
+}
+.trainer-photo{
+    border: 8px solid #41BEAD;
+    border-radius: 50%;
+    max-height: 150px;
+    object-fit: cover;
+    max-width: 150px;
+    margin-right: 3%;
+}
+.trainer-name{
+    color: #41BEAD;
+}
+.trainer-position{
+    color: gray;
+}
+
+.trainers-list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.trainers-list .trainer-position{
+    text-align: center;
+}
+.trainer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+
+.become-part-of-team{
+    background: #4F9FF0;
+    padding-top: 5%;
+    padding-bottom: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 10px solid #66B9F8;
+}
+.candidate-content{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.candidate-header{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.candidate-info{
+    color: white;
+    text-align: center;
+}
+.candidates-form{
+    display: flex;
+    justify-content: space-around;
+}
+.input-field{
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    background: transparent;
+    border-color: white;
+    padding: 5px 0 5px 5px;
+    margin-right: 3%;
+}
+.submit-btn{
+    background: #FF9100;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    font-weight: bolder;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px gray;
+    
+}
+*::placeholder{
+    color: white;
+}
+
+.page-footer{
+    background-color: #424242;
+    border-top: 10px solid #919191;
+    color: white;
+    padding-bottom: 20px;
+}
+.footer-article{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-article li{
+    list-style: none;
+}
+.footer-header{
+    margin-bottom: 5px;
+}
+.footer-section{
+    display: flex;
+    flex-direction: column;
+}
+.footer-list{
+    padding-left: 0;
+}
+.footer-list.hyperlinks{
+    display: flex;
+}
+.footer-list.hyperlinks i{
+    margin-right: 5px;
+    height: 25px;
+    width: 25px;
+}
